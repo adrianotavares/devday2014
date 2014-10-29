@@ -9,6 +9,8 @@ import com.hazelcast.core.HazelcastInstance;
 
 /**
  * HazelcastServerSample
+ * 
+ * @author adrianotavares
  *
  */
 public class HazelcastServerSample 
