@@ -15,7 +15,6 @@ public class HazelcastClientSample {
 
 	public static void main(String[] args) {
 		ClientConfig clientConfig = new ClientConfig();
-        clientConfig.addAddress("127.0.0.1:5701");
         HazelcastInstance client = HazelcastClient.newHazelcastClient(clientConfig);
         IMap map = client.getMap("customers");
         System.out.println("Map Size:" + map.size());	

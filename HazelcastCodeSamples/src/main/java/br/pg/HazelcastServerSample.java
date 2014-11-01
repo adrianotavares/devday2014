@@ -3,6 +3,7 @@ package br.pg;
 import java.util.Map;
 import java.util.Queue;
 
+import com.hazelcast.config.ClasspathXmlConfig;
 import com.hazelcast.config.Config;
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
@@ -17,8 +18,7 @@ public class HazelcastServerSample
 {
     public static void main( String[] args )
     {
-    	Config cfg = new Config();
-    	
+    	Config cfg = new ClasspathXmlConfig("hazelcast.xml");
         HazelcastInstance instance = Hazelcast.newHazelcastInstance(cfg);
         Map<Integer, String> mapCustomers = instance.getMap("customers");
         mapCustomers.put(1, "Joe");
